@@ -9,3 +9,18 @@
 .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root {
   border-radius: 54.6591px !important;
 }
+
+.css-1pzwdxo-MuiButtonBase-root-MuiMenuItem-root:hover {
+  color: #f60618 !important;
+  background-color: inherit !important;
+}
+
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  border-radius: 10px !important;
+  padding: 0.6em 1em;
+}
+
+.css-1l3gffz-MuiButtonBase-root-MuiButton-root-MuiStack-root {
+  color: #f60618 !important;
+  border: 1px solid #D23852 !important;
+}

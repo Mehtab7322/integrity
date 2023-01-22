@@ -25,7 +25,7 @@ const ReuseableModal = ({ componentArr, handleClose, open }) => {
             <Stack sx={style} spacing='1em'>
                 {componentArr && componentArr.map((comps, key) => {
                     // <Stack>{comps[0]}</Stack>
-                    return <Stack key={key} alignItems={'center'} justifyContent={'center'} spa>{comps}</Stack>;
+                    return <Stack key={key} alignItems={'center'} justifyContent={'center'} >{comps}</Stack>;
                 })}
             </Stack>
 

@@ -3,8 +3,9 @@ import { Stack, ThemeProvider } from '@mui/system'
 import ManageHistoryIcon from '@mui/icons-material/ManageHistory';
 import TaxiAlertIcon from '@mui/icons-material/TaxiAlert';
 import React from 'react'
+import { NonPlatinumButton, PlatinumButton } from '../button/Buttons';
 
-const GarageCarCard = ({ cardImage }) => {
+const GarageCarCard = ({ cardImage, text }) => {
     const { palette } = createTheme();
     const { augmentColor } = palette;
     const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
@@ -20,25 +21,28 @@ const GarageCarCard = ({ cardImage }) => {
                 <CardMedia
                     component="img"
                     height='145'
+                    marginTop='12px'
                     image={cardImage}
                     alt="Paella dish"
                 />
-                <Divider sx={{ width: '80%' }} />
-                <CardActions disableSpacing sx={{ width: '100%', justifyContent: 'space-around' }}>
+                <Divider sx={{ width: '80%', marginTop: '12px' }} />
+                <CardActions disableSpacing sx={{ width: '100%', justifyContent: 'space-around', marginTop: '12px' }}>
                     <Stack alignItems={'center'}>
-                        <Button variant="outlined" color="anger" sx={{ width: 'fit-content', minWidth: 'fit-content' }} aria-label="delete">
+                        <Button variant="outlined" color="anger" sx={{ width: 'fit-content', minWidth: 'fit-content', padding: '8px 10px' }} aria-label="delete">
                             <ManageHistoryIcon />
                         </Button>
                         <Typography variant='caption'>Carfax History</Typography>
                     </Stack>
 
                     <Stack alignItems={'center'}>
-                        <Button variant="outlined" color="anger" sx={{ width: 'fit-content', minWidth: 'fit-content' }} aria-label="delete">
+                        <Button variant="outlined" color="anger" sx={{ width: 'fit-content', minWidth: 'fit-content', padding: '8px 10px' }} aria-label="delete">
                             <TaxiAlertIcon />
                         </Button>
                         <Typography variant='caption'>Services Due</Typography>
                     </Stack>
                 </CardActions>
+                <PlatinumButton text={text} />
+                {/* <NonPlatinumButton text={text} /> */}
             </Card>
         </ThemeProvider>
     )

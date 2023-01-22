@@ -13,6 +13,8 @@ import PrivateRoutes from './PrivateRoutes';
 import Layout from '../../components/layout/Layout';
 import DashboardScreen from '../../screens/profile/dashboard/DashboardScreen';
 import GarageScreen from '../../screens/profile/garage/GarageScreen';
+import AppointmentScreen from '../../screens/profile/appointment/AppointmentScreen';
+import AccountScreen from '../../screens/account/AccountScreen';
 
 
 const routes = createBrowserRouter([
@@ -72,6 +74,30 @@ const routes = createBrowserRouter([
       <PrivateRoutes>
         <Layout>
           <GarageScreen />
+        </Layout>
+      </PrivateRoutes>
+    ),
+  },
+  //Appointment
+  {
+    path: '/appointment',
+    errorElement: <ErrorPage />,
+    element: (
+      <PrivateRoutes>
+        <Layout>
+          <AppointmentScreen />
+        </Layout>
+      </PrivateRoutes>
+    ),
+  },
+  //Account
+  {
+    path: '/account',
+    errorElement: <ErrorPage />,
+    element: (
+      <PrivateRoutes>
+        <Layout>
+          <AccountScreen />
         </Layout>
       </PrivateRoutes>
     ),
