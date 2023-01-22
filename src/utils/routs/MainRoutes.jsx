@@ -15,6 +15,7 @@ import DashboardScreen from '../../screens/profile/dashboard/DashboardScreen';
 import GarageScreen from '../../screens/profile/garage/GarageScreen';
 import AppointmentScreen from '../../screens/profile/appointment/AppointmentScreen';
 import AccountScreen from '../../screens/account/AccountScreen';
+import CarfaxHistoryScreen from '../../screens/profile/garage/CarfaxHistoryScreen';
 
 
 const routes = createBrowserRouter([
@@ -77,6 +78,17 @@ const routes = createBrowserRouter([
         </Layout>
       </PrivateRoutes>
     ),
+  },
+  {
+    path: '/garage/carfax',
+    errorElement: <ErrorPage />,
+    element: (
+      <PrivateRoutes>
+        <Layout>
+          <CarfaxHistoryScreen />
+        </Layout>
+      </PrivateRoutes>
+    )
   },
   //Appointment
   {

@@ -11,8 +11,10 @@ import GetPlatinum from '../../../assets/images/getplatinum.svg'
 import Price from '../../../assets/images/Price.svg'
 import ServiceTask from '../../../assets/images/service-task.svg'
 import Booked from '../../../assets/images/booked.svg'
+import { useNavigate } from 'react-router';
 
 const GarageCarCard = ({ cardImage, text, isPlatinum }) => {
+    const nav = useNavigate()
     const [open, setOpen] = useState(false)
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
@@ -36,7 +38,8 @@ const GarageCarCard = ({ cardImage, text, isPlatinum }) => {
             </Stack>
         )
     }
-    const componentArr = [headline(), content(), serviceDueCard()]
+    const serviceButton = () => <RedLinearButton text={'Book an Appointment'} width={'50%'} />
+    const componentArr = [headline(), content(), serviceDueCard(), serviceButton()]
 
     //Get Non-Platinum Content
     const [openPlat, setOpenPlat] = useState({
@@ -145,7 +148,7 @@ const GarageCarCard = ({ cardImage, text, isPlatinum }) => {
                 <Divider sx={{ width: '80%', marginTop: '12px' }} />
                 <CardActions disableSpacing sx={{ width: '100%', justifyContent: 'space-around', marginTop: '12px' }}>
                     <Stack alignItems={'center'}>
-                        <Button variant="outlined" color="anger" sx={{ width: 'fit-content', minWidth: 'fit-content', padding: '8px 10px' }} aria-label="delete">
+                        <Button variant="outlined" color="anger" onClick={() => nav('/garage/carfax')} sx={{ width: 'fit-content', minWidth: 'fit-content', padding: '8px 10px' }} aria-label="delete">
                             <ManageHistoryIcon />
                         </Button>
                         <Typography variant='caption'>Carfax History</Typography>
