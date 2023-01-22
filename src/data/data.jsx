@@ -31,12 +31,12 @@ export const accounts = [
 ]
 
 export const sideBarLIst = [
-    { icon: <DashboardIcon />, text: 'Dashboard' },
-    { icon: <DirectionsCarRoundedIcon />, text: 'Garage' },
-    { icon: <CalendarMonthIcon />, text: 'Book Appointment' },
-    { icon: <PersonIcon />, text: 'Account' },
-    { icon: <RssFeedIcon />, text: 'Blog' },
-    { icon: <LogoutRoundedIcon />, text: 'Logout' },
+    { icon: <DashboardIcon />, text: 'Dashboard' , path: '/dashboard'},
+    { icon: <DirectionsCarRoundedIcon />, text: 'Garage' , path: '/garage'},
+    { icon: <CalendarMonthIcon />, text: 'Book Appointment' , path: '/appointment'},
+    { icon: <PersonIcon />, text: 'Account' , path: '/account'},
+    { icon: <RssFeedIcon />, text: 'Blog' , path: '/blog'},
+    { icon: <LogoutRoundedIcon />, text: 'Logout' , path: '/'},
 ]
 
 export const footerNavigation = [
@@ -77,3 +77,14 @@ export const profileMenuList = [
     { icon: <img src={Person} />, text: 'Account' },
     { icon: <img src={RefferVector} />, text: 'Refer a Friend' },
 ]
+
+export const serviceTasks = [
+    "Oil Change",
+    "Brake Pads",
+    "New Battery",
+    "Auids Changesd",
+    "Other Maintanance",
+    "Power Setup",
+    "Power Setup",
+]
+

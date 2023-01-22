@@ -80,7 +80,7 @@ const RewardCard = () => {
 
 
     return (
-        <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} sx={{ border: '1px solid #E4E7EC', borderRadius: '10px', padding: '1em' }} width={'57%'}>
+        <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'} sx={{ border: '1px solid #E4E7EC', borderRadius: '10px', padding: '1em', backgroundColor: '#FFFFFF' }} width={{ lg: '57%', md: 'auto' }}>
             <img src={RewardMeter} alt='' style={{ width: '40%', padding: '4px' }} />
             <Divider sx={{ border: '1px solid #D0D5DD', height: '80%' }} />
             <Stack width={'50%'}>

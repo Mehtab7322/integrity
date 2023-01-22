@@ -10,7 +10,7 @@ const DashboardComponent = () => {
         <Stack padding={'3em 2em'} spacing={4}>
             <Stack spacing={4}>
                 <Typography variant="h4" color={'#344054'}>Dashboard</Typography>
-                <Stack direction={'row'} justifyContent={'space-between'}>
+                <Stack direction={{ lg: 'row', md: 'column' }} spacing={{md:4}}>
                     <RewardCard />
                     <RefferCard />
                 </Stack>
@@ -20,7 +20,7 @@ const DashboardComponent = () => {
                     <Typography variant="h4" color={'#344054'}>Our Blog</Typography>
                     <Typography component={Link} color={'#F83D4B'} sx={{ textDecoration: 'none', cursor: 'pointer' }}>View All Blogs</Typography>
                 </Stack>
-                <Stack direction={'row'} justifyContent={'space-between'}>
+                <Stack direction={'row'} flexWrap='wrap'>
                     <BlogCard header='Answering all your questions about' content='There are many different 
                     therapy approaches.  When you enter into therapy, you may not know about the approaches 
                     and how your therapist is going to work with you.  While you' cardImage={BlogCard1} />

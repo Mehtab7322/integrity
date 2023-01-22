@@ -106,7 +106,7 @@ const routes = createBrowserRouter([
 const MainRoutes = () => {
   return (
     <>
-      <Stack height={'auto'}>
+      <Stack height={'100%'}>
         <RouterProvider router={routes} />
       </Stack>
     </>

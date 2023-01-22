@@ -4,7 +4,7 @@ import React from 'react'
 const AccountCard = ({ image, text, title }) => {
     return (
         <>
-            <Card sx={{ maxWidth: 305, minWidth: 200, marginRight: 4, marginTop: 4 }}>
+            <Card sx={{ maxWidth: 300, minWidth: 200, marginRight: 2, marginTop: 4 }}>
                 <CardHeader
                     avatar={<img src={image} alt='' width={20} />}
                     title={title}

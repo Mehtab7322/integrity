@@ -5,8 +5,10 @@ import { sideBarLIst, timeSheet } from '../../data/data'
 import Avatar from '../../assets/images/Avatar.svg'
 import ReuseableModal from '../reuseable/ReuseableModal'
 import '../../utils/css/styles.css'
+import { useNavigate } from 'react-router'
 
 const SideBar = () => {
+    const nav = useNavigate()
     const user = 'Diana'
     const [open, setOpen] = useState(false)
     const handleOpen = () => setOpen(true);
@@ -15,7 +17,6 @@ const SideBar = () => {
         return <Typography variant='h4' fontWeight={'600'}>Opening Hours</Typography>
     }
     const timeTable = () => {
-        console.log(timeSheet)
         return (
             <MenuList sx={{ width: '100%' }}>
                 {
@@ -40,7 +41,7 @@ const SideBar = () => {
     const componentArr = [headline(), timeTable()]
     return (
         <>
-            <Stack width={'20%'} position="sticky" sx={{ backgroundColor: '#ffffff' }}>
+            <Stack width={'30%'} sx={{ backgroundColor: '#ffffff' }}>
                 <Drawer
                     sx={{
                         flexShrink: 0,
@@ -60,9 +61,9 @@ const SideBar = () => {
                     </Stack>
                     <Divider />
                     <List>
-                        {sideBarLIst.map(({ icon, text }, index) => (
+                        {sideBarLIst.map(({ icon, text, path }, index) => (
                             <ListItem key={text} disablePadding>
-                                <ListItemButton>
+                                <ListItemButton onClick={() => nav(path)} >
                                     <ListItemIcon>
                                         {icon}
                                     </ListItemIcon>

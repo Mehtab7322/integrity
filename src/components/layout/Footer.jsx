@@ -6,7 +6,7 @@ import { footerNavigation, footerPrivacyTerm, footerSocialIcons } from '../../da
 
 const Footer = () => {
     return (
-        <Stack minHeight={'30vh'} sx={{ backgroundColor: 'black', padding: '3em 4em' }}>
+        <Stack sx={{ backgroundColor: 'black', padding: '3em 4em' }}>
             <Stack direction={'row'} justifyContent={'space-between'} >
                 <img src={logoBlack} alt='' style={{ width: '8em' }} />
                 <List style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', color: '#FFFFFF' }}>

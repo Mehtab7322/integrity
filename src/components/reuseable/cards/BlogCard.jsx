@@ -9,7 +9,7 @@ import { RedSolidButton } from '../../reuseable/button/Buttons';
 
 const BlogCard = ({ header, content, cardImage }) => {
     return (
-        <Card elevation={0} sx={{ width: '30%', background: 'inherit' }}>
+        <Card elevation={0} sx={{ minWidth: 100, maxWidth: 300, background: 'inherit' , marginRight:'0.3em'}}>
             <CardMedia
                 sx={{ backgroundImage: `url(${cardImage})`, backgroundPosition: 'center', backgroundSize: 'cover', height: "10em", borderRadius: '10px' }}
                 component="div"

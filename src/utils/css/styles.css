@@ -24,3 +24,13 @@
   color: #f60618 !important;
   border: 1px solid #D23852 !important;
 }
+
+.css-l7oqsv-MuiStack-root {
+  width: fit-content !important;
+  max-width: 50vw !important;
+}
+
+.css-hq2t9e-MuiButtonBase-root-MuiButton-root {
+  color: #f60618 !important;
+  border: 1px solid #D23852 !important;
+}

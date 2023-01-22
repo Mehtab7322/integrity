@@ -10,6 +10,7 @@ import { accounts } from '../../../data/data'
 import '../../../utils/css/styles.css'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import { RedSolidButton } from '../../reuseable/button/Buttons'
+import { useNavigate } from 'react-router'
 
 
 const SignUpComponent = () => {
@@ -48,7 +49,7 @@ const SignUpComponent = () => {
         )
     }
     const leftSectionContent = [logoImage(), carousalImages(), leftSecContent()] //left section content array
-
+    const nav = useNavigate()
     //login right section content
     const headLine = () => {
         return (
@@ -91,7 +92,7 @@ const SignUpComponent = () => {
                         {showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton></InputAdornment>
                 }} />
-                <RedSolidButton text='Complete Setup' />
+                <RedSolidButton text='Complete Setup' nav={nav} routeAddress='/dashboard' />
                 <Stack direction={'row'} spacing={2} alignItems={'center'}>
                     <Divider sx={{ flex: 1 }} /> <Typography fontSize={'small'}>Instant Login</Typography><Divider sx={{ flex: 1 }} />
                 </Stack>

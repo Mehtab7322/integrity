@@ -117,7 +117,7 @@ const LoginComponent = () => {
 
     return (
         <>
-            <Grid container spacing={1} height={'100%'}>
+            <Grid container spacing={1} height={'100%'} className='testtesttesttest'>
                 <Grid item xs='6'>
                     <LeftSection leftSectionContent={leftSectionContent} />
                 </Grid>

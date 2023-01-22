@@ -75,22 +75,23 @@ export const RedSolidButton = ({ width, nav, routeAddress, text }) => {
     return <Button onClick={() => nav(routeAddress)} variant="contained" size='large' sx={{ borderRadius: '54.6591px', bgcolor: '#F83D4B', fontSize: 'small', p: 2, width: { width } || 'initial' }}>{text}</Button>
 }
 
-export const RedLinearButton = ({ handleClose, width, text }) => {
-    return <Button onClick={() => handleClose()} variant="contained" sx={{ borderRadius: '54.6591px', background: 'linear-gradient(80.67deg, #C42E66 27.97%, #D23852 96.9%)', fontSize: 'small', p: 2, width: { width } || 'inherit' }}>{text}</Button>
+export const RedLinearButton = ({ handleClose, width, text, variant }) => {
+    console.log("🚀 ~ file: Buttons.jsx:81 ~ RedLinearButton ~ variant", variant)
+    return <Button onClick={() => handleClose()} variant={variant ? variant : 'contained'} sx={{ borderRadius: '54.6591px', background: variant ? '' : 'linear-gradient(80.67deg, #C42E66 27.97%, #D23852 96.9%)', color: 'danger', fontSize: 'small', p: 2, width: { width } || 'inherit' }}>{text}</Button>
 }
 
-export const PlatinumButton = ({ text }) => {
+export const PlatinumButton = ({ text, handler }) => {
     return (
         <Stack spacing={2} direction="row" width={'100%'} marginTop='12px'>
-            <PlatinumButtonStyle>{text}</PlatinumButtonStyle>
+            <PlatinumButtonStyle onClick={() => handler()}>{text}</PlatinumButtonStyle>
         </Stack>
     );
 }
 
-export const NonPlatinumButton = ({ text }) => {
+export const NonPlatinumButton = ({ text, handler }) => {
     return (
         <Stack spacing={2} direction="row" width={'100%'} marginTop='12px'>
-            <NonPlatinumButtonStyle>{text}</NonPlatinumButtonStyle>
+            <NonPlatinumButtonStyle onClick={() => handler()}>{text}</NonPlatinumButtonStyle>
         </Stack>
     );
 }
