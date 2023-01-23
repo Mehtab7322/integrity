@@ -34,3 +34,78 @@
   color: #f60618 !important;
   border: 1px solid #D23852 !important;
 }
+
+.styledTime {
+  background: linear-gradient(80.67deg, #C42E66 27.97%, #D23852 96.9%);
+  color: white;
+}
+
+
+/* react date-picker styles configurations */
+
+.react-datepicker {
+  width: 100% !important;
+  height: 100% !important;
+  font-size: 1em;
+  border: none !important;
+  box-shadow: 0px 0px 33px 5px rgba(27, 48, 89, 0.05), 0px 4px 6px -2px rgba(16, 24, 40, 0.05) !important;
+}
+
+.react-datepicker__month-container {
+  float: none !important;
+  height: 100%;
+}
+
+.react-datepicker__day-names {
+  display: flex !important;
+  padding: 0.4rem !important;
+  justify-content: space-between !important;
+}
+
+.react-datepicker__day-names,
+.react-datepicker__week {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  padding-bottom: 8px !important;
+}
+
+.react-datepicker__day-names {
+  background-color: #FFFFFF !important;
+}
+
+.react-datepicker__header {
+  border-bottom: none !important;
+  padding-top: 0.8em;
+  background-color: #E4E7EC !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+  background: linear-gradient(80.67deg, #C42E66 27.97%, #D23852 96.9%) !important;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  background: linear-gradient(80.67deg, #C42E66 27.97%, #D23852 96.9%) !important;
+}
+
+.react-datepicker__month {
+  margin: 0.4em 1em;
+}

@@ -14,8 +14,8 @@ import Layout from '../../components/layout/Layout';
 import DashboardScreen from '../../screens/profile/dashboard/DashboardScreen';
 import GarageScreen from '../../screens/profile/garage/GarageScreen';
 import AppointmentScreen from '../../screens/profile/appointment/AppointmentScreen';
-import AccountScreen from '../../screens/account/AccountScreen';
 import CarfaxHistoryScreen from '../../screens/profile/garage/CarfaxHistoryScreen';
+import AccountScreen from '../../screens/profile/account/AccountScreen';
 
 
 const routes = createBrowserRouter([

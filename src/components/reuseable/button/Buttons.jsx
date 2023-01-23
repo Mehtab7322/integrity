@@ -76,7 +76,6 @@ export const RedSolidButton = ({ width, nav, routeAddress, text }) => {
 }
 
 export const RedLinearButton = ({ handleClose, width, text, variant }) => {
-    console.log("🚀 ~ file: Buttons.jsx:81 ~ RedLinearButton ~ variant", variant)
     return <Button onClick={() => handleClose()} variant={variant ? variant : 'contained'} sx={{ borderRadius: '54.6591px', background: variant ? '' : 'linear-gradient(80.67deg, #C42E66 27.97%, #D23852 96.9%)', color: 'danger', fontSize: 'small', p: 2, width: { width } || 'inherit' }}>{text}</Button>
 }
 
